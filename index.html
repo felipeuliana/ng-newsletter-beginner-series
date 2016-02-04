@@ -16,11 +16,17 @@
     <div class="container row">
       <div class="large-8 small-8 columns">
       <h2>Player</h2>
+      <div>
+        <button class="button" ng-click="play()" ng-show="!playing">Play</button>
+        <button class="button alert" ng-click="stop()" ng-show="playing">Stop</button>
+        Playing audio <b></b>
       </div>
+    </div>
 
-      <div class="large-4 small-4 columns" ng-controller="RelatedController">
-        <h2>Related content</h2>
-      </div>
+    <div class="large-4 small-4 columns" ng-controller="RelatedController">
+      <h2>Related content</h2>
+    </div>
+
     </div>
 
     <script>
