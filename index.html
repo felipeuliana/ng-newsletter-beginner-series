@@ -9,6 +9,26 @@
   </head>
   <body>
 
+    <!-- accessing $rootScope -->
+    <!--
+    <input type="text" ng-model="name" placehlder="Enter your name">
+    <h1>Hello, {{ name }}!</h1>
+    -->
+
+    <!-- ng-controller -->
+    <div ng-controller="MyController">
+      <input type="text" ng-model="person.name" placeholder="Enter your name">
+      <h1>Hello, {{ person.name }}!</h1>
+    </div>
+
+    <div ng-controller="ParentController">
+      <div ng-controller="ChildController">
+        <input type="text" ng-model="person.name" placeholder="Name">
+        <a ng-click="sayHello()">Say hello</a>
+      </div>
+      {{ person }}
+    </div>
+
     <script>
       document.write('<script src=js/vendor/'
         + ('__proto__' in {} ? 'zepto' : 'jquery')
